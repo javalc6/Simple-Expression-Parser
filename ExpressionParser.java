@@ -1,6 +1,6 @@
 /* very simple math expression parser in less than 200 lines of Java code
 
-Expressions may contain brackets ( ), operands *,-,/,+ and numbers with optional decimal point.
+Expressions may contain brackets ( ), operators *,-,/,+ and numbers with optional decimal point.
 
 <expression> ::= <term> { ("+"|"-") <term> }*
 <term> ::= <factor> { ("*"|"/") <factor> }*
