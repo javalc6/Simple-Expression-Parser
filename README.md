@@ -1,6 +1,6 @@
 # Expression Parser
 This Java class parses simple math expressions, like 2.5+2*(3-7).
-Expressions may contain brackets ( ), operands *,-,/,+ and numbers with optional decimal point.
+Expressions may contain brackets ( ), operators *,-,/,+ and numbers with optional decimal point.
 
 # Methods
 The following methods are provided to parse and evaluate math expressions:
