@@ -81,7 +81,7 @@ public class ExpressionParser {
 		StringHolder sh = new StringHolder(expr);
 		Node result = expression(sh);
 		if (sh.chars_available())
-			throw new Exception("unexpected character: " + expr.charAt(sh.pointer));
+			throw new Exception("unexpected character: '" + expr.charAt(sh.pointer) + "' at position " + sh.pointer);
 		return result;
 	}
 
@@ -113,7 +113,7 @@ public class ExpressionParser {
 		Character ch = sh.nextChar("(-0123456789");
 		if (ch == null)
 			if (sh.chars_available())
-				throw new Exception("unexpected character: " + sh.expr.charAt(sh.pointer));
+				throw new Exception("unexpected character: '" + sh.expr.charAt(sh.pointer) + "' at position " + sh.pointer);
 			else throw new Exception("unexpected end of expression");
 		if (ch == '(') {
 			Node n1 = expression(sh);
